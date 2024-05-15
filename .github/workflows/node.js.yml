@@ -42,7 +42,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: venki098/sample:0.4
+        tags: venki098/sample:0.5
 
     - name: Image digest
       run: echo "Docker image built and pushed successfully"
