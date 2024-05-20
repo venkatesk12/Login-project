@@ -1,6 +1,7 @@
 describe('My Test', () => {
     it('passes', () => {
-      cy.visit('http://localhost:4200/');
+      cy.visit('https://www.example.com/');
+      cy.get('h1').should('contain', 'Example Domain');
       
     });
   }); 
