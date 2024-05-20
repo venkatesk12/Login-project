@@ -1,3 +1,6 @@
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
 module.exports = function (config) {
     config.set({
       basePath: '',
@@ -22,7 +25,7 @@ module.exports = function (config) {
         suppressAll: true // removes the duplicated traces
       },
       coverageReporter: {
-        dir: require('path').join(__dirname, './coverage/frond-end'),
+        dir: require('path').join(__dirname, './coverage/uswdsscss'),
         subdir: '.',
         reporters: [
           { type: 'html' },
@@ -34,13 +37,7 @@ module.exports = function (config) {
       colors: true,
       logLevel: config.LOG_INFO,
       autoWatch: true,
-      browsers: ['ChromeHeadless'],
-      customLaunchers: {
-        ChromeHeadlessCI: {
-          base: 'ChromeHeadless',
-          flags: ['--no-sandbox']
-        }
-      },
+      browsers: ['Chrome'],
       singleRun: false,
       restartOnFileChange: true
     });

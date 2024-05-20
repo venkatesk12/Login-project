@@ -25,7 +25,7 @@ jobs:
     - run: npm install
     - run: npm run build
     - name: Test
-      run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      run: npm test -- --no-watch --no-progress 
     - name: Cypress run
       uses: cypress-io/github-action@v2
       with:
