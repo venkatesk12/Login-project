@@ -25,7 +25,7 @@ module.exports = function (config) {
         suppressAll: true // removes the duplicated traces
       },
       coverageReporter: {
-        dir: require('path').join(__dirname, './coverage/uswdsscss'),
+        dir: require('path').join(__dirname, './coverage/frond-end'),
         subdir: '.',
         reporters: [
           { type: 'html' },
@@ -37,9 +37,14 @@ module.exports = function (config) {
       colors: true,
       logLevel: config.LOG_INFO,
       autoWatch: true,
-      browsers: ['Chrome'],
+      browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
+      customLaunchers: {
+       ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+       flags: ['--no-sandbox']
+    }
+  },
       singleRun: false,
       restartOnFileChange: true
     });
   };
-  
