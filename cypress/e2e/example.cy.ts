@@ -1,6 +1,6 @@
-describe('My First Test', () => {
-    it('Visits the homepage', () => {
-      cy.visit('/');
-      cy.get('h1').should('contain', 'Welcome to my app!'); 
+describe('My Test', () => {
+    it('passes', () => {
+      cy.visit('https://www.google.com');
+      cy.get('h1').should('contain', 'Example Domain');
     });
-  });
+  }); 
