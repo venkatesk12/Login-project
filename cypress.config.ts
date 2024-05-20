@@ -5,8 +5,10 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       
     },
+    
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}' , 
   },
+  
 
   component: {
     devServer: {
