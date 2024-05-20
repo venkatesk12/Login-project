@@ -18,3 +18,11 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// cypress/e2e/my-test.cy.ts
+describe('My Test', () => {
+    it('passes', () => {
+      cy.visit('https://www.google.com');
+      cy.get('h1').should('contain', 'Example Domain');
+    });
+  }); 
