@@ -1,7 +1,9 @@
 describe('My Test', () => {
     it('passes', () => {
-      cy.visit('https://www.example.com/');
-      cy.get('h1').should('contain', 'Example Domain');
-      
+        // Visit the homepage
+        cy.visit('/');
+
+        cy.get('#stname1').type('venkatesh.k@innoart.io');
+        cy.get('#stname2').type('Venki123#');
     });
-  }); 
+});
